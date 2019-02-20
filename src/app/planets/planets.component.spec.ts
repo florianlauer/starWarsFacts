@@ -1,22 +1,27 @@
+import { HttpClient, HttpHandler } from '@angular/common/http';
 import { RouterTestingModule } from '@angular/router/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeComponent } from './home.component';
+import { PlanetsComponent } from './planets.component';
 
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('PlanetsComponent', () => {
+  let component: PlanetsComponent;
+  let fixture: ComponentFixture<PlanetsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      declarations: [PlanetsComponent],
       imports: [RouterTestingModule],
-      declarations: [HomeComponent]
+      providers: [
+        HttpClient,
+        HttpHandler
+      ]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(PlanetsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

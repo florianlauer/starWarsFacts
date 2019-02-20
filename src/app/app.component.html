@@ -1,8 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
-
-
+<div class="lds-ring" [hidden]='!HTTPActivity'>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+<div [hidden]='HTTPActivity' class="container">
+  <router-outlet></router-outlet>
+</div>

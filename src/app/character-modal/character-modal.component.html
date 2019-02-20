@@ -1,0 +1,40 @@
+<div class="modal-content" *ngIf="character">
+  <div class="modal-header">
+    <h4 class="modal-title">{{character.name}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span>&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="list-group d-flex flex-row flex-wrap">
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Height : </span>
+        {{character.height}}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Mass : </span> {{character.mass}}
+      </div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Hair color : </span>
+        {{character.hair_color}}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Skin color : </span>
+        {{character.skin_color}}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Eye color : </span>
+        {{character.eye_color}}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Birth year : </span>
+        {{character.birth_year}}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Gender : </span>
+        {{character.gender}}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Homeworld : </span>
+        {{character.homeworld}}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Films : </span>
+        {{character.films.join(', ') }}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Species : </span>
+        {{character.species.join(', ') }}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Vehicles : </span>
+        {{character.vehicles.join(', ') }}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Starships : </span>
+        {{ character.starships.join(', ') }}</div>
+
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-light" (click)="activeModal.close('Close click')">Close</button>
+  </div>
+</div>

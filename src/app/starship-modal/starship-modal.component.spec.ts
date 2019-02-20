@@ -1,22 +1,24 @@
 import { RouterTestingModule } from '@angular/router/testing';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeComponent } from './home.component';
+import { StarshipModalComponent } from './starship-modal.component';
 
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('StarshipModalComponent', () => {
+  let component: StarshipModalComponent;
+  let fixture: ComponentFixture<StarshipModalComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      declarations: [HomeComponent]
+      declarations: [StarshipModalComponent],
+      providers: [NgbActiveModal]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(StarshipModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

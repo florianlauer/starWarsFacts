@@ -1,0 +1,35 @@
+<div class="modal-content" *ngIf="planet">
+  <div class="modal-header">
+    <h4 class="modal-title">{{planet.name}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span>&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="list-group d-flex flex-row flex-wrap">
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Rotation period : </span>
+        {{planet.rotation_period}}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Orbital period : </span>
+        {{planet.orbital_period}}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Diameter : </span>
+        {{planet.diameter}}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Climate : </span> {{planet.climate}}
+      </div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Gravity : </span> {{planet.gravity}}
+      </div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Terrain : </span> {{planet.terrain}}
+      </div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Surface water : </span>
+        {{planet.surface_water}}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Population : </span>
+        {{planet.population}}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Residents : </span>
+        {{planet.residents.join(', ') }}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Films : </span>
+        {{planet.films.join(', ') }}</div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-light" (click)="activeModal.close('Close click')">Close</button>
+  </div>
+</div>

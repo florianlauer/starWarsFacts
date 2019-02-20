@@ -1,0 +1,43 @@
+<div class="modal-content" *ngIf="starship">
+  <div class="modal-header">
+    <h4 class="modal-title">{{starship.name}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span>&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="list-group d-flex flex-row flex-wrap">
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Model : </span> {{starship.model}}
+      </div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Manufacturer : </span>
+        {{starship.manufacturer}}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Cost in credits : </span>
+        {{starship.cost_in_credits}}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Length : </span> {{starship.length}}
+      </div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Max atmosphering speed : </span>
+        {{starship.max_atmosphering_speed}}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Crew : </span> {{starship.crew}}
+      </div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Passengers : </span>
+        {{starship.passengers}}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Cargo capacity : </span>
+        {{starship.cargo_capacity}}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Consumables : </span>
+        {{starship.consumables}}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Hyperdrive rating : </span>
+        {{starship.hyperdrive_rating}}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">MGLT : </span> {{starship.MGLT}}
+      </div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Starship class : </span>
+        {{starship.starship_class}}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Pilots : </span>
+        {{starship.pilots.join(', ') }}</div>
+      <div class="list-group-item w-50 list-group-item-action"><span class="yellow">Films : </span>
+        {{starship.films.join(', ') }}</div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-light" (click)="activeModal.close('Close click')">Close</button>
+  </div>
+</div>

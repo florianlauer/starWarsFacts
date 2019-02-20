@@ -1,0 +1,20 @@
+<div class="navigation">
+  <div (click)="goToHome()"><img src="/assets/images/home.png"></div>
+  <div class="push-left" [routerLink]="[ '/characters' ]"><img src="/assets/images/space.png"></div>
+  <div [routerLink]="[ '/planets' ]"><img src="/assets/images/planet.png"></div>
+</div>
+<div class="title">Starships</div>
+<div class="row equal">
+  <div *ngFor="let starship of this.starships" class="col-sm-4 d-flex justify-content-center pb-3">
+    <div class="card">
+      <img class="card-img-top" src="/assets/images/rocket.png">
+      <div class="card-body">
+        <h4 class="card-title">{{starship.name}}</h4>
+        <div class="details-button">
+          <button class="btn" type="button" (click)="open(starship)">View details</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
